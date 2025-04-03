@@ -15,6 +15,7 @@ typedef struct s_philo
     pthread_t thread;
     pthread_mutex_t *left_fork;
     pthread_mutex_t *right_fork;
+
     long long last_meal_time;
     int meals_eaten;
     // Other state variables
@@ -52,6 +53,7 @@ void philosopher_routine(t_philo *philo)
 - **Advantages**: Simple deadlock prevention
 - **Disadvantages**: Can lead to starvation; lacks mathematical elegance
 
+
 ### 3. Even-Odd Strategy
 
 Even-numbered philosophers take right fork first, odd take left fork first:
@@ -77,6 +79,8 @@ void philosopher_routine(t_philo *philo)
 
 - **Advantages**: Easy to implement
 - **Disadvantages**: Ad-hoc solution without formal guarantees
+
+
 
 ## Graph-Based Resource Allocation Approach
 
